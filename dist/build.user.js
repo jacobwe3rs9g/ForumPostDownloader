@@ -621,7 +621,7 @@ const parsers = {
 
             const postIdAnchor = post.querySelector('li:last-of-type > a');
             const postId = /(?<=\/post-).*/i.exec(postIdAnchor.getAttribute('href'))[0];
-            const postNumber = postIdAnchor.textContent.replace('#', '').trim();
+            const postNumber = postIdAnchor.textContent.replace('#', '').replace(',', '').trim();
 
             // Remove the following from the post content:
             // 1. Quotes.
